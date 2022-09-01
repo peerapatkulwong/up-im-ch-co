@@ -5,12 +5,15 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-    <div class="all">
-        <p>วางเมาส์ไว้บนรูปภาพ แล้วมันจะเปลี่ยนสี</p>
-        <p>สามารถอัพโหลดรูปภาพได้</p>
-        <div class="put">
-            <input type="file" id="up_image" accept="image/png, image/jpg">
-            <div id="display_image"></div>
+    <div class="container">
+        <p>เวลา</p>
+        <div class="clock">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+            <span id="time_unit">AM</span>
         </div>
     </div>
     <script src="process.js">

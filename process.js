@@ -1,16 +1,13 @@
-var image_input = document.querySelector("#image_input");
-var up_image = "";
+function time(){
+    var datetime = new Date()
+    var hrs = datetime.getHours();
+    var min = datetime.getMinutes();
+    var sec = datetime.getSeconds();
+    var time_unit = document.getElementById('time_unit');
 
-image_input.addEventListener('change',function(){
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-        up_image = reader.result;
-        document.querySelector("#display_image").style.backgroundImage = up_image;
-    });
-    reader.readAsDataURL(this.files[0]);
-});
+    document.getElementById('hours').innerHTML = hrs;
+    document.getElementById('minutes').innerHTML = min;
+    document.getElementById('seconds').innerHTML = sec;
+}
 
-clear.addEventListener('click',function(event){
-    document.getElementById('put').value = '';
-    document.querySelector('.out').innerHTML = '';
-});
+setInterval(time);
